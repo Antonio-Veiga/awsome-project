@@ -1,0 +1,20 @@
+<div data-target="app-encapsulation">
+  <div data-target="mobile-encapsulation" *ngIf="isMobileDevice; else desktop">
+    <mobile-nav></mobile-nav>
+    <!-- <ng-template #withoutMobileNav>
+              ---- *ngIf="loggedIn; else withoutMobileNav"
+        <ion-app>
+          <ion-router-outlet></ion-router-outlet>
+        </ion-app>
+      </ng-template> -->
+  </div>
+  <ng-template #desktop>
+    <div data-target="desktop-encapsulation">
+      <desktop-nav></desktop-nav>
+      <!-- <ng-template #withoutDesktopNav>
+              ---- *ngIf="loggedIn; else withoutDesktopNav"
+          <router-outlet></router-outlet>
+        </ng-template> -->
+    </div>
+  </ng-template>
+</div>
